@@ -692,6 +692,8 @@ message ServiceEntry {
   // Note that when resolution is set to type DNS
   // and no endpoints are specified, the host field will be used as the DNS name
   // of the endpoint to route traffic to.
+  //
+  // Note that partial wildcards are not supported, and values like `*w.example.com` are invalid.
   repeated string hosts = 1 [(google.api.field_behavior) = REQUIRED];
 
   // The virtual IP addresses associated with the service. Could be CIDR
